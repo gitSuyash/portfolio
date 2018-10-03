@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    #skills {
+        display: none;
+    }
+
+    li {
+        font-size: 28px;
+        padding-top: 15px;
+        border-bottom: 2px solid black;
+        max-width: 100%;
+        margin: auto;
+        border-radius: 15px;
+    }
+
+    #projects {
+        display: none;
+    }
+
+    #projects li {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #certificates {
+        display: none;
+    }
+
+    #certificates li {
+        max-width: 100%;
+        padding-top: 30px;
+    }
+
+    #positions {
+        display: none;
+    }
+
+    #positions li {
+        max-width: 100%;
+        padding-top: 30px;
+    }
+
+    #educations {
+        display: none;
+    }
+
+    #educations li {
+        max-width: 100%;
+        padding-top: 30px;
+    }
+
+    .foot {
+        height: 200px;
+        position: fixed;
+        background-color: greenyellow;
+    }
+
+    .aniPara {
+
+        animation: fade 3s linear;
+    }
+
+    .moving {
+        animation: move 1s linear infinite;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.75;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    button {
+        font-family: Roboto Condensed;
+    }
+
+    #misc {
+        display: none;
+    }
+    .bg{
+        background-image: pro.jpg;
+        height:1000px;
+    }
+    </style>
+    <title>Suyash's Profile</title>
+</head>
+
+<body class="bg">
+    <div class="container-fluid">
+        <div class="row" style=" background-image: linear-gradient(to bottom,#33C7F7,greenyellow  );padding-bottom: 20px">
+            <div class="col-md-6 text-center" style="padding-top: 0px;">
+                <img src="https://scontent.fdel1-1.fna.fbcdn.net/v/t1.0-9/42543884_2012056988851159_3577799656983232512_n.jpg?_nc_cat=104&oh=f6f85446a149b2569a64b9495323fd40&oe=5C2716D0" class="rounded-circle img-fluid" style="width: 300px;height:300px">
+            </div>
+            <div class="col-md-6" style="padding-top: 30px;">
+                <p class="display-2">Suyash Gupta</p>
+                <p style="font-size: 25px;">+91 9453820761</p>
+                <p style="font-size: 25px">suyag10@gmail.com</p>
+                <p style="font-size: 25px"><a href="https://codepen.io/suyash_10/" target="_blank" style="color: black;text-decoration: none">codepen.io/suyash_10/</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center" style="padding-top: 70px;">
+                    <a href="#skills" onclick="skill()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right, #33C7F7,greenyellow );color:black;font-size: 35px;height:80px;">Skills</button>
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center" style="padding-top: 70px;">
+                    <a href="#projects" onclick="project()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right,#33C7F7,greenyellow );color:black;font-size: 35px;height:80px;">Projects</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center justify-content-around" style="padding-top: 70px;">
+                <div class="col-sm-6">
+                    <a href="#certificates" onclick="certificate()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right, #33C7F7,greenyellow );color:black;font-size: 35px;height:80px;">Certificates</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center" style="padding-top: 70px">
+                    <a href=#positions onclick="position()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right,#33C7F7,greenyellow ); color:black;font-size: 35px;height:80px;">Positions</button>
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center" style="padding-top: 70px">
+                    <a href="#educations" onclick="education()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right,#33C7F7   ,greenyellow  ); color:black;font-size: 35px;height:80px;">Education
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center justify-content-around" style="padding-top: 70px;">
+                <div class="col-sm-6">
+                    <a href="#misc" onclick="misc()">
+                        <button class="btn btn-primary btn-lg" style="width:300px;border-radius: 40px; background-image: linear-gradient(to right, #33C7F7,greenyellow );color:black;font-size: 35px;height:80px;">Extracurricular</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-sm-12">
+                <div id="skills" style=" background-image: linear-gradient(to bottom, #33C7F7,skyblue ); border-radius: 50px;">
+                    <ul class="list-unstyled text-center list-inline" style="padding-top: 20px;border-radius: 30px;">
+                        <li class="list-inline-item">HTML</li>
+                        <li class="list-inline-item">CSS</li>
+                        <li class="list-inline-item">SASS</li>
+                        <li class="list-inline-item">AJAX</li>
+                        <li class="list-inline-item">JAVASCRIPT</li>
+                        <li class="list-inline-item">BOOTSTRAP</li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+                <div id="projects" style=" background-image: linear-gradient(to bottom,orange,yellow );border-radius: 50px">
+                    <ul class="list-unstyled text-center list-inline">
+                        <li class="list-inline-item">
+                            <h4>First Responsive WebPage</h4>
+                            <a href="http://foodieup.000webhostapp.com" target="_blank" style="color: grey;font-size: 20px">
+                                <p>foodieup.000webhostapp.com</p>
+                            </a>
+                            <p>This is the First Responsive WebPage designed purely by CSS</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <h4>MultiPlayer Tic Tac Toe Game</h4>
+                            <p><a href="http://tictactoe10.000webhostapp.com" target="_blank" style="color: grey;font-size: 20px">tictactoe10.000webhostapp.com</a></p>
+                            <p>It is a Multiplayer Tic-Tac-Toe Game in which 2 people at a place can enjoy the game</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <h4>HTML Calculator</h4>
+                            <p><a href="http://modcalc.000webhostapp.com" target="_blank" style="color: grey;font-size: 20px;">modcalc.000webhostapp.com</a></p>
+                            <p>In this WebApp we can perform basic calculation like addition, subtraction etc..One operation is done at a time, the solution of an operation can be used for further calculations in same manner. </p>
+                        </li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+                <div id="certificates" style=" background-image: linear-gradient(to bottom, yellow,#E74C3C ); border-radius: 50px;">
+                    <ul class="list-unstyled text-center list-inline">
+                        <li class="list-inline-item">
+                            <h2>Interactivity With JavaScript</h2>
+                            <h5>University of Michigan (Online)</h5></li>
+                        <li class="list-inline-item">
+                            <h2>Fundamentals Of Digital Marketing</h2>
+                            <h5>Google (Online)</h5></li>
+                        <li class="list-inline-item">
+                            <h2>Web Development</h2>
+                            <h5>Internshala Trainings (Online)</h5></li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+                <div id="positions" style=" background-image: linear-gradient(to bottom,pink ,purple ); border-radius: 50px;">
+                    <ul class="list-unstyled text-center list-inline">
+                        <li class="list-inline-item">
+                            <h3>Internshala Student Partner(ISP),<p>
+                            Noida</p></h3>
+                        </li>
+                        <li class="list-inline-item">
+                            <h3>Front-end Web Developer at Entreprenuership Development Cell(EDC), Noida</h3>
+                        </li>
+                        <li class="list-inline-item">
+                            <h3>Marketing Executive at Entreprenuership Development Cell(EDC), Noida</h3>
+                        </li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+                <div id="educations" style=" background-image: linear-gradient(to right,#76D7C4   ,#17A589  ); border-radius: 50px;">
+                    <ul class="list-unstyled text-center list-inline">
+                        <li class="list-inline-item">
+                            <h2>B.Tech(EC)</h2>
+                            <p>2017-2021</p>
+                            <p>JSS Academy of Technical Education, Noida </p>
+                            <p>CGPA: 8.46/10</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <h2>XII (Senior Secondary)</h2>
+                            <p>2016</p>
+                            <p>(ISC Board)Seth AnandRam Jaipuria School, Kanpur</p>
+                            <p>Percentage:92.4%</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <h2>X (Secondary)</h2>
+                            <p>2014</p>
+                            <p>(ICSE Board)Seth AnandRam Jaipuria School, Kanpur</p>
+                            <p>Percentage:88.8%</p>
+                        </li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+                <div id="misc" style=" background-image: linear-gradient(to right,yellow,pink); border-radius: 50px;">
+                    <ul class="list-inline list-unstyled text-center">
+                        <li class="list-inline-item">
+                            <p> Active Member of AksharGyan, a team of college students who teach Underprivileged Children</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <p>Member of Organising Team of E'Summit 18, Noida</p>
+                        </li>
+                        <li class="list-inline-item">
+                            <p>NCC Cadet in School & also cleared 'A' Level Examination.</p>
+                        </li>
+                        <li style="font-size: 30px;border:0px;" class="moving"><a href="#top" style="color: black">&#8657</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var detONe = 0;
+
+    function skill() {
+
+
+
+        document.getElementById('skills').style.display = "block";
+
+        document.getElementById('skills').className = "aniPara";
+
+    }
+    var detTwo = 0;
+
+    function project() {
+
+
+        document.getElementById('projects').style.display = "block";
+
+        document.getElementById('projects').className = "aniPara";
+
+    }
+    var detThree = 0;
+
+    function certificate() {
+
+
+        document.getElementById('certificates').style.display = "block";
+
+        document.getElementById('certificates').className = "aniPara";
+
+    }
+    var detFour = 0;
+
+    function position() {
+
+
+        document.getElementById('positions').style.display = "block";
+
+        document.getElementById('positions').className = "aniPara";
+
+    }
+    var detFive = 0;
+
+    function education() {
+
+
+        document.getElementById('educations').style.display = "block";
+
+        document.getElementById('educations').className = "aniPara";
+
+    }
+
+    function misc() {
+        document.getElementById('misc').style.display = "block";
+
+        document.getElementById('misc').className = "aniPara";
+    }
+    </script>
+</body>
+
+</html>
